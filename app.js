@@ -38,23 +38,6 @@ function PageTransitions() {
         let element = document.body;
         element.classList.toggle('light-mode');
     })
-
-    // Email form
-    const emailBtn = document.getElementById('send-email');
-    emailBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('user-name').value;
-        const email = document.getElementById('user-email').value;
-        const subject = document.getElementById('email-subject').value;
-        const body = document.getElementById('email-body').value;
-        
-        const recipientEmail = 'julia.fang2012@gmail.com';
-        const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + "\n\n" + `Best Regards,\n${name}`)}`;
-    
-        window.location.href = mailtoLink;
-    });
 }
 
 PageTransitions();
